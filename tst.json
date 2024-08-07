@@ -1,0 +1,603 @@
+{
+    "urn": "ACoAAAQjPjABHZr3KkdKb3cae3wIV3kao2WV2jg",
+    "username": "billstropp",
+    "firstName": "Bill",
+    "lastName": "Stropp",
+    "isCreator": false,
+    "isOpenToWork": false,
+    "isHiring": false,
+    "profilePicture": "https://media.licdn.com/dms/image/C4D03AQGN35_EF9t7bw/profile-displayphoto-shrink_800_800/0/1516865605553?e=1727913600\u0026v=beta\u0026t=ir_s_IwvqTIS3kpMRG7FJmbL2avqMITCtyVD8rDOfxU",
+    "backgroundImage": [
+        {
+            "width": 400,
+            "height": 100,
+            "url": "https://media.licdn.com/dms/image/C4E16AQGUGdSosuQfLg/profile-displaybackgroundimage-shrink_200_800/0/1580482666483?e=1727913600\u0026v=beta\u0026t=O6j9Xw7Tr0xx61jtznXhmHi9JqL3lCC5gXSiYgefTv8"
+        },
+        {
+            "width": 400,
+            "height": 100,
+            "url": "https://media.licdn.com/dms/image/C4E16AQGUGdSosuQfLg/profile-displaybackgroundimage-shrink_350_1400/0/1580482666508?e=1727913600\u0026v=beta\u0026t=NB7F-Oaa1I7dMxQ8wQd9b8-cZjxkeBCkF3JtmSz08XM"
+        }
+    ],
+    "summary": "Assisting existing clients and creating new clients for First Command Financial Services in Central Florida, with emphasis on helping ROTC Cadets with lifetime financial planning.  Contact me, mobile 706-580-0955 email bjstropp@firstcommand.com.  \n\nFirst Command is a Texas based 50+ year old company that is owned by its’ Financial Advisors and Employees. First Command’s mission is coaching those who serve in their pursuit of financial security. Our focus continues to be on building trusting Client-Advisor relationships by meeting face-to-face with our client families. We learn what’s important to them; help them establish meaningful and specific goals that reflect their values, and then construct comprehensive financial plans.   \n\nPeriodically I post information regarding my employer First Command Financial Services and the social media usage guidelines that apply to First Command also apply to my pages. Please view them here: http://bit.ly/fclinkedinguidelines.",
+    "headline": "Financial Advisor and Principal at First Command Financial Services, Inc.",
+    "geo": {
+        "country": "United States",
+        "city": "Lady Lake, Florida",
+        "full": "Lady Lake, Florida, United States"
+    },
+    "languages": null,
+    "educations": [
+        {
+            "start": {
+                "year": 1969,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 1973,
+                "month": 0,
+                "day": 0
+            },
+            "fieldOfStudy": "Education",
+            "degree": "Bachelor Science",
+            "grade": "",
+            "schoolName": "Florida State University",
+            "description": "",
+            "activities": "Baseball team, Lambda Chi Alpha fraternity",
+            "url": "https://www.linkedin.com/school/florida-state-university/",
+            "schoolId": "163849"
+        }
+    ],
+    "position": [
+        {
+            "companyId": 9479,
+            "companyName": "First Command Financial Services, Inc.",
+            "companyUsername": "first-command-financial-services",
+            "companyURL": "https://www.linkedin.com/company/first-command-financial-services/",
+            "companyLogo": "https://media.licdn.com/dms/image/C4E0BAQF0oP-AY-W3vw/company-logo_400_400/0/1630595756502/first_command_financial_services_logo?e=1730332800\u0026v=beta\u0026t=kyRJalsjLl2VusSOp9Uw6T-DxS7sEecJ2MMZ4YTMS8Y",
+            "companyIndustry": "Financial Services",
+            "companyStaffCountRange": "501 - 1000",
+            "title": "Financial Advisor and Principal",
+            "multiLocaleTitle": {
+                "en_US": "Financial Advisor and Principal"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services, Inc."
+            },
+            "location": "Central Florida",
+            "description": "Assisting existing clients and creating new clients for First Command Financial Services in Central Florida. Emphasis in helping ROTC Cadets to start financial plans for their lifetime in pursuit of their financial goals.",
+            "employmentType": "Full-time",
+            "start": {
+                "year": 2018,
+                "month": 3,
+                "day": 0
+            },
+            "end": {
+                "year": 0,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 9479,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "first-command-financial-services",
+            "companyURL": "https://www.linkedin.com/company/first-command-financial-services/",
+            "companyLogo": "https://media.licdn.com/dms/image/C4E0BAQF0oP-AY-W3vw/company-logo_400_400/0/1630595756502/first_command_financial_services_logo?e=1730332800\u0026v=beta\u0026t=kyRJalsjLl2VusSOp9Uw6T-DxS7sEecJ2MMZ4YTMS8Y",
+            "companyIndustry": "Financial Services",
+            "companyStaffCountRange": "501 - 1000",
+            "title": "District Advisor",
+            "multiLocaleTitle": {
+                "en_US": "District Advisor"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Houston, Texas",
+            "description": "Recruit, train, mentor, and inspire Financial Advisors in the Greater Houston area.",
+            "employmentType": "",
+            "start": {
+                "year": 2010,
+                "month": 11,
+                "day": 0
+            },
+            "end": {
+                "year": 2018,
+                "month": 3,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Associate Director, Recruiting Operations",
+            "multiLocaleTitle": {
+                "en_US": "Associate Director, Recruiting Operations"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Fort Worth, Texas",
+            "description": "Directed a national recruiting campaign to recruit Financial Advisors for First Command Financial Services. Supervised a team of recruiters at First Command national headquarters in Fort Worth, Texas.",
+            "employmentType": "",
+            "start": {
+                "year": 2007,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2010,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "District Advisor",
+            "multiLocaleTitle": {
+                "en_US": "District Advisor"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Annapolis, Maryland and Columbus, Georgia",
+            "description": "Operational leader responsible for recruiting, hiring, and training new advisors.  Provided on-going training on all financial products being marketed.",
+            "employmentType": "",
+            "start": {
+                "year": 2003,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2006,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Regional Agent",
+            "multiLocaleTitle": {
+                "en_US": "Regional Agent"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Maryland, West Virginia, Pennsylvania, Ohio, Indiana, Michigan",
+            "description": "Managed all recruiting and sales activities for Great Lakes Region with nine district offices and sales staff of 50.  Directed career recruiting and client appreciation events.  Conducted regularly scheduled group training sessions to enhance selling skills.",
+            "employmentType": "",
+            "start": {
+                "year": 2001,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2003,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Assistant Regional Agent",
+            "multiLocaleTitle": {
+                "en_US": "Assistant Regional Agent"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Fort Worth, Texas",
+            "description": "Assisted District Advisors in the Southwest Region to develop markets and recruit, train and motivate agent teams to achieve production goals.",
+            "employmentType": "",
+            "start": {
+                "year": 1999,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2001,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "District Advisor",
+            "multiLocaleTitle": {
+                "en_US": "District Advisor"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Heidelberg, Germany; Leavenworth, Kansas; Colorado Springs, Colorado",
+            "description": "Operational leader responsible for recruiting, hiring, and training new advisors.  Provided on-going training on all financial products being marketed.",
+            "employmentType": "",
+            "start": {
+                "year": 1989,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 1999,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Registered Representative \u0026 Agent",
+            "multiLocaleTitle": {
+                "en_US": "Registered Representative \u0026 Agent"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Honolulu, Hawaii",
+            "description": "Developed and sold financial plans for prospective clients and existing clients in Hawaii.",
+            "employmentType": "",
+            "start": {
+                "year": 1981,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 1989,
+                "month": 0,
+                "day": 0
+            }
+        }
+    ],
+    "fullPositions": [
+        {
+            "companyId": 9479,
+            "companyName": "First Command Financial Services, Inc.",
+            "companyUsername": "first-command-financial-services",
+            "companyURL": "https://www.linkedin.com/company/first-command-financial-services/",
+            "companyLogo": "https://media.licdn.com/dms/image/C4E0BAQF0oP-AY-W3vw/company-logo_400_400/0/1630595756502/first_command_financial_services_logo?e=1730332800\u0026v=beta\u0026t=kyRJalsjLl2VusSOp9Uw6T-DxS7sEecJ2MMZ4YTMS8Y",
+            "companyIndustry": "Financial Services",
+            "companyStaffCountRange": "501 - 1000",
+            "title": "Financial Advisor and Principal",
+            "multiLocaleTitle": {
+                "en_US": "Financial Advisor and Principal"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services, Inc."
+            },
+            "location": "Central Florida",
+            "description": "Assisting existing clients and creating new clients for First Command Financial Services in Central Florida. Emphasis in helping ROTC Cadets to start financial plans for their lifetime in pursuit of their financial goals.",
+            "employmentType": "Full-time",
+            "start": {
+                "year": 2018,
+                "month": 3,
+                "day": 0
+            },
+            "end": {
+                "year": 0,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 9479,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "first-command-financial-services",
+            "companyURL": "https://www.linkedin.com/company/first-command-financial-services/",
+            "companyLogo": "https://media.licdn.com/dms/image/C4E0BAQF0oP-AY-W3vw/company-logo_400_400/0/1630595756502/first_command_financial_services_logo?e=1730332800\u0026v=beta\u0026t=kyRJalsjLl2VusSOp9Uw6T-DxS7sEecJ2MMZ4YTMS8Y",
+            "companyIndustry": "Financial Services",
+            "companyStaffCountRange": "501 - 1000",
+            "title": "District Advisor",
+            "multiLocaleTitle": {
+                "en_US": "District Advisor"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Houston, Texas",
+            "description": "Recruit, train, mentor, and inspire Financial Advisors in the Greater Houston area.",
+            "employmentType": "",
+            "start": {
+                "year": 2010,
+                "month": 11,
+                "day": 0
+            },
+            "end": {
+                "year": 2018,
+                "month": 3,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Associate Director, Recruiting Operations",
+            "multiLocaleTitle": {
+                "en_US": "Associate Director, Recruiting Operations"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Fort Worth, Texas",
+            "description": "Directed a national recruiting campaign to recruit Financial Advisors for First Command Financial Services. Supervised a team of recruiters at First Command national headquarters in Fort Worth, Texas.",
+            "employmentType": "",
+            "start": {
+                "year": 2007,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2010,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "District Advisor",
+            "multiLocaleTitle": {
+                "en_US": "District Advisor"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Annapolis, Maryland and Columbus, Georgia",
+            "description": "Operational leader responsible for recruiting, hiring, and training new advisors.  Provided on-going training on all financial products being marketed.",
+            "employmentType": "",
+            "start": {
+                "year": 2003,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2006,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Regional Agent",
+            "multiLocaleTitle": {
+                "en_US": "Regional Agent"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Maryland, West Virginia, Pennsylvania, Ohio, Indiana, Michigan",
+            "description": "Managed all recruiting and sales activities for Great Lakes Region with nine district offices and sales staff of 50.  Directed career recruiting and client appreciation events.  Conducted regularly scheduled group training sessions to enhance selling skills.",
+            "employmentType": "",
+            "start": {
+                "year": 2001,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2003,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Assistant Regional Agent",
+            "multiLocaleTitle": {
+                "en_US": "Assistant Regional Agent"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Fort Worth, Texas",
+            "description": "Assisted District Advisors in the Southwest Region to develop markets and recruit, train and motivate agent teams to achieve production goals.",
+            "employmentType": "",
+            "start": {
+                "year": 1999,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 2001,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "District Advisor",
+            "multiLocaleTitle": {
+                "en_US": "District Advisor"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Heidelberg, Germany; Leavenworth, Kansas; Colorado Springs, Colorado",
+            "description": "Operational leader responsible for recruiting, hiring, and training new advisors.  Provided on-going training on all financial products being marketed.",
+            "employmentType": "",
+            "start": {
+                "year": 1989,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 1999,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "companyId": 0,
+            "companyName": "First Command Financial Services",
+            "companyUsername": "",
+            "companyURL": "",
+            "companyLogo": "",
+            "companyIndustry": "",
+            "companyStaffCountRange": "",
+            "title": "Registered Representative \u0026 Agent",
+            "multiLocaleTitle": {
+                "en_US": "Registered Representative \u0026 Agent"
+            },
+            "multiLocaleCompanyName": {
+                "en_US": "First Command Financial Services"
+            },
+            "location": "Honolulu, Hawaii",
+            "description": "Developed and sold financial plans for prospective clients and existing clients in Hawaii.",
+            "employmentType": "",
+            "start": {
+                "year": 1981,
+                "month": 0,
+                "day": 0
+            },
+            "end": {
+                "year": 1989,
+                "month": 0,
+                "day": 0
+            }
+        }
+    ],
+    "skills": [
+        {
+            "name": "Financial Planning",
+            "passedSkillAssessment": false
+        },
+        {
+            "name": "Investments",
+            "passedSkillAssessment": false
+        },
+        {
+            "name": "Insurance",
+            "passedSkillAssessment": false
+        },
+        {
+            "name": "Strategic Planning",
+            "passedSkillAssessment": false
+        },
+        {
+            "name": "Budgeting",
+            "passedSkillAssessment": false
+        }
+    ],
+    "givenRecommendation": null,
+    "givenRecommendationCount": 0,
+    "receivedRecommendation": null,
+    "receivedRecommendationCount": 0,
+    "courses": null,
+    "certifications": null,
+    "honors": [
+        {
+            "title": "Regional Recruiter of the Year",
+            "description": "1998",
+            "issuer": "First Command Financial Services",
+            "issuerLogo": "",
+            "issuedOn": {
+                "year": 0,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "title": "Regional Salesman of the Year",
+            "description": "1985 and 1986",
+            "issuer": "First Command Financial Services",
+            "issuerLogo": "",
+            "issuedOn": {
+                "year": 0,
+                "month": 0,
+                "day": 0
+            }
+        },
+        {
+            "title": "Summit Club Award",
+            "description": "1983-1989 as a Financial Advisor\n1990-1999; 2004-2006 as a District Advisor\n2000-2001 as Assistant Regional Advisor\n2002-2003 as Regional Advisor",
+            "issuer": "First Command Financial Services",
+            "issuerLogo": "",
+            "issuedOn": {
+                "year": 0,
+                "month": 0,
+                "day": 0
+            }
+        }
+    ],
+    "projects": {
+        "total": 0,
+        "items": null
+    },
+    "volunteering": null,
+    "supportedLocales": [
+        {
+            "country": "US",
+            "language": "en"
+        }
+    ],
+    "multiLocaleFirstName": {
+        "en": "Bill"
+    },
+    "multiLocaleLastName": {
+        "en": "Stropp"
+    },
+    "multiLocaleHeadline": {
+        "en": "Financial Advisor and Principal at First Command Financial Services, Inc."
+    }
+}

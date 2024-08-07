@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<database>
+
+
+    <table name="Disclosures">
+        <description>A disclosures section that contains information about any arbitration awards,
+            disciplinary events and financial matters on the firm's record.</description>
+        <column name="crd_number">
+            <type>bigint</type>
+            <description>it is a unique identifier allocated to each broker </description>
+        </column>
+        <column name="eventDate ">
+            <type>text</type>
+            <description>describe the date of the event </description>
+        </column>
+        <column name="disclosure Type ">
+            <type>text</type>
+            <description>It provides a clear and concise way to identify the nature of each
+                disclosure</description>
+        </column>
+        <column name="disclosureResolution">
+            <type>text</type>
+            <description> It provides a summary of how each issue was resolved or managed</description>
+        </column>
+        <column name="islapdExcludedCCFlag">
+            <type>text </type>
+            <description>By incorporating the islapdExcludedCCFlag column, you can manage and
+                control your dataset more effectively</description>
+        </column>
+        <column name="isBCExcludedCCFlag">
+            <type>text</type>
+            <description> Flags records that should be excluded from certain analyses, reports, or
+                processes.</description>
+        </column>
+        <column name="bcCtgryType">
+            <type>text</type>
+            <description> Assigns a category or type to each record</description>
+        </column>
+        <column name="iaCtgryType">
+            <type>text </type>
+            <description>: Facilitates data segmentation, allowing for targeted analysis and
+                reporting.</description>
+        </column>
+        <column name="Allegations">
+            <type>text</type>
+            <description> used to document and categorize allegations related to incidents,
+                complaints, or disputes.</description>
+        </column>
+        <column name="Damage Amount Requested">
+            <type>text</type>
+            <description> Flags records that should be excluded from certain analyses, reports, or
+                processes. used to record the amount of monetary compensation or damages requested
+                by a party involved in a dispute</description>
+        </column>
+        <column name="DisplayAAOlinkIfExist ">
+            <type>text</type>
+            <description> used to determine whether a link to an Additional Adjudication Outcome
+                (AAO)
+                or a similar document should be displayed</description>
+        </column>
+        <column name="arbitrationClaimFieldDetail">
+            <type>text</type>
+            <description> This column helps manage the visibility of additional resource within a
+                user interface or report.</description>
+        </column>
+        <column name="arbitrationDocknetNumber">
+            <type>text</type>
+            <description>his column is likely used to identify or categorize arbitration-related
+                documentation by a unique number</description>
+        </column>
+
+    </table>
+
+    <table name='brokercheck_data'>
+        <description>contains the total count of Disclosures, Exams Passed and State Licenses of the
+            advisor targeted using CRD Number</description>
+        <column name='CRD Number' type='bigint'>
+            <description>CRD number of the advisor</description>
+        </column>
+        <column name="Disclosures" type='text'>
+            <description>Total discloures count on the CRD number of the advisor </description>
+        </column>
+        <column name="Exams Passed" type='text'>
+            <description>Total Exams passed by the advisor</description>
+        </column>
+        <column name="State Licenses" type='text'>
+            <description>Total State Licenses that advisor has.</description>
+        </column>
+
+    </table>
+    <!-- db table for assetlink csv file -->
+    <table name="financial_advisors_db">
+        <description>Information about financial advisors</description>
+        <column name="CRD" type='bigint'>
+            <description>Unique identifier for each advisor</description>
+        </column>
+
+        <column name="NPN">
+            <type>double precision</type>
+            <description>NPN value</description>
+        </column>
+
+        <column name="First Name">
+            <type>text</type>
+            <description>First name of the advisor</description>
+        </column>
+        <column name="Middle Name">
+            <type>text</type>
+            <description>Middle name of the advisor</description>
+        </column>
+        <column name="Last Name">
+            <type>text</type>
+            <description>Last name of the advisor</description>
+        </column>
+
+        <column name="Other Names">
+            <type>text</type>
+            <description>Other name of the advisor</description>
+        </column>
+
+        <column name="Other Names">
+            <type>text</type>
+            <description>Other name of the advisor</description>
+        </column>
+
+        <column name="Team">
+            <type>double precision</type>
+            <description>Team name of the advisor</description>
+        </column>
+        <column name='Broker-Dealer' type='text'>
+            <description>Broker Dealer of the advisor</description>
+        </column>
+        <column name='Broker-Dealer CRD' type='text'>
+            <description>Broker Dealer crd number of the advisor</description>
+        </column>
+        <column name='Years with Current BD' type='text'>
+            <description>Total number of years with current Broker Dealer of the advisor</description>
+        </column>
+
+        <column name='Current BD Start Date' type='text'>
+            <description>Start Date of the current Broker Dealer</description>
+        </column>
+        <column name='RIA' type='text'>
+            <description>Registered investment advisor (RIA) firm name of the advisor </description>
+        </column>
+        <column name='RIA CRD' type='text'>
+            <description>crd_number of the registered investment advisor (RIA) firm</description>
+        </column>
+        <column name='Years with Current RIA' type='text'>
+            <description>number of year the advisor worked with the current REgistered investment
+                advisor (RIA) </description>
+        </column>
+        <column name='Current RIA State Date' type='text'>
+            <description>advisor started working with the current registered investment advisor
+                (RIA) </description>
+        </column>
+        <column name='Address' type='text'>
+            <description>Address of the advisor</description>
+        </column>
+        <column name='City' type='text'>
+            <description>City of the advisor</description>
+        </column>
+        <column name='State' type='text'>
+            <description>State of the advisor</description>
+        </column>
+
+
+        <column name='Zip' type='text'>
+            <description>Zip code of the advisor</description>
+        </column>
+
+        <column name='Metro Area' type='text'>
+            <description> Metro area of the advisor</description>
+        </column>
+
+        <column name='Licenses &amp; Exams' type='text'>
+            <description>All the Licenses and their exams of the advisor</description>
+        </column>
+        <column name='Title' type='text'>
+            <description>Title of the advisor</description>
+        </column>
+        <column name='Designations' type='text'>
+            <description>Designation of the advisor</description>
+        </column>
+        <column name='Phone' type='text'>
+            <description>Phone number of the advisor</description>
+        </column>
+        <column name='Phone-Type' type='text'>
+            <description>Phone-Type of the advisor</description>
+        </column>
+        <column name='LinkedIn' type='text'>
+            <description>Linkedin profile url of the advisor</description>
+        </column>
+        <column name='Email 1' type='text'>
+            <description>Email one of the advisor</description>
+        </column>
+        <column name='Email 2' type='text'>
+            <description>Email two of the advisor</description>
+        </column>
+        <column name='Email 3' type='text'>
+            <description>Email 3 of the advisor</description>
+        </column>
+        <column name='Personal Email' type='text'>
+            <description>Personal Email of the advisor</description>
+        </column>
+
+        <column name='Bio' type='text'>
+            <description>Bio of the advisor</description>
+        </column>
+
+        <column name='Years of Experience' type='bigint'>
+            <description>Years of Experience of the advisor</description>
+        </column>
+
+        <column name='Est. Age' type='double precision'>
+            <description>Estimated Age of the advisor</description>
+        </column>
+        <column name='Previous Broker Dealer' type='text'>
+            <description>Previous Broker Dealer of the advisor</description>
+        </column>
+
+        <column name='Previous RIA' type='text'>
+            <description>Previous registered investment advisor (RIA) of the advisor</description>
+        </column>
+        <column name='Gender' type='text'>
+            <description>Gender of the advisor</description>
+        </column>
+        <column name='Team Id' type='bigint'>
+            <description>Team Id of the advisor</description>
+        </column>
+        <column name='Person Tag-Role' type='double precision'>
+            <description>Person Tag-Role of the advisor</description>
+        </column>
+        <column name='Person Tag-Family' type='text'>
+            <description>Person Tag-Family of the advisor</description>
+        </column>
+        <column name='Person Tag-Hobbies' type='text'>
+            <description>Hobbies of the advisor</description>
+        </column>
+        <column name='Person Tag-Expertise' type='text'>
+            <description>Expertise of the advisor</description>
+        </column>
+        <column name='Person Tag-Services' type='text'>
+            <description>Services of the advisor</description>
+        </column>
+        <column name='Person Tag-Services' type='text'>
+            <description>Services of the advisor</description>
+        </column>
+        <column name='Person Tag-Investments' type='text'>
+            <description>Investments of the advisor</description>
+        </column>
+        <column name='Person Tag-School' type='text'>
+            <description>School of the advisor</description>
+        </column>
+        <column name='Person Tag-Greek Life' type='text'>
+            <description>Greek Life of the advisor</description>
+        </column>
+        <column name='Person Tag-Militarty Status' type='text'>
+            <description>Militarty Status of the advisor</description>
+        </column>
+        <column name='Person Tag-Faith Based Investing' type='text'>
+            <description>Faith Based Investing of the advisor</description>
+        </column>
+        <column name='Firm Tag-Platform' type='text'>
+            <description>Firm Tag Platforms of the advisor</description>
+        </column>
+        <column name='Firm Tag-Technology' type='text'>
+            <description>Firm Tag Technology of the advisor</description>
+        </column>
+        <column name='Firm Tag-Services' type='text'>
+            <description>Firm Tag Services of the advisor</description>
+        </column>
+        <column name='Firm Tag-Investments' type='text'>
+            <description>Firm Tag Investments of the advisor</description>
+        </column>
+        <column name='Firm Tag-Custodian' type='text'>
+            <description>Firm Tag Custodian of the advisor</description>
+        </column>
+        <column name='Firm Tag-Clients' type='text'>
+            <description>Firm Tag Clients of the advisor</description>
+        </column>
+        <column name='Firm Tag-CRM' type='text'>
+            <description>Firm Tag CRM of the advisor</description>
+        </column>
+        <column name='Notes' type='text'>
+            <description>Notes of the advisor</description>
+        </column>
+        <column name='Profile' type='text'>
+            <description>Profiessional profile of the advisor</description>
+        </column>
+        <column name='SEC Link' type='text'>
+            <description>Security link of the advisor</description>
+        </column>
+        <column name='FINRA Link' type='text'>
+            <description>FINRA profile link of the advisor</description>
+        </column>
+        <column name='Firm Company Name' type='text'>
+            <description>Firm Company Name of the advisor</description>
+        </column>
+        <column name='Firm Type' type='text'>
+            <description>Firm Type of the advisor</description>
+        </column>
+        <column name='Firm Address' type='text'>
+            <description>Firm Address of the advisor</description>
+        </column>
+        <column name='Firm City' type='text'>
+            <description>Firm City of the advisor</description>
+        </column>
+        <column name='Firm State' type='text'>
+            <description>Firm State of the advisor</description>
+        </column>
+        <column name='Firm Zip' type='text'>
+            <description>Firm Zip of the advisor</description>
+        </column>
+        <column name='Firm Phone' type='text'>
+            <description>Firm Phone of the advisor</description>
+        </column>
+        <column name='Firm AUM' type='text'>
+            <description>Firm AUM of the advisor</description>
+        </column>
+        <column name='Firm Total Accounts' type='text'>
+            <description>Firm Total Accounts of the advisor</description>
+        </column>
+        <column name='Firm Custodians' type='text'>
+            <description>Firm Custodians of the advisor</description>
+        </column>
+        <column name='Firm Total Employees' type='text'>
+            <description>Firm Total Employees count of the advisor</description>
+        </column>
+        <column name='Firm RIA Reps' type='text'>
+            <description>Firm RIA Reps count of the advisor</description>
+        </column>
+        <column name='Firm BD Reps' type='text'>
+            <description>Firm BD Reps count of the advisor</description>
+        </column>
+        <column name='Firm Form 13F' type='text'>
+            <description>Firm Form 13F of the advisor</description>
+        </column>
+        <column name='Lines' type='text'>
+            <description>Lines of the advisor</description>
+        </column>
+        <column name='Carrier' type='double precision'>
+            <description>Carrier of the advisor</description>
+        </column>
+        <column name='Company' type='double precision'>
+            <description>Company of the advisor</description>
+        </column>
+    </table>
+
+    <table name='principalExamCategory'>
+        <description>contains Data on the principal exam category taken by the advisor</description>
+        <column name='crd_number' type='bigint'>
+            <description>CRD number of the advisor</description>
+        </column>
+        <column name='examCategory' type='text'>
+            <description>Category of exam of the advisor</description>
+        </column>
+        <column name='examCategory' type='text'>
+            <description>Category of exam written by the advisor</description>
+        </column>
+        <column name='examName' type='text'>
+            <description>name of exam writen by the advisor</description>
+        </column>
+        <column name='examTakenDate' type='text'>
+            <description>Date on which the exam was taken by the advisor</description>
+        </column>
+        <column name='examScope' type='text'>
+            <description>Scope of the exam taken by the advisor</description>
+        </column>
+    </table>
+
+    <table name='productExamCategory'>
+        <description>contains Data on the product exam category taken by the advisor</description>
+
+        <column name='crd_number' type='bigint'>
+            <description>CRD number of the advisor</description>
+        </column>
+        <column name='examCategory' type='text'>
+            <description>Category of exam taken by the advisor</description>
+        </column>
+        <column name='examName' type='text'>
+            <description>name of exam writen by the advisor</description>
+        </column>
+        <column name='examTakenDate' type='text'>
+            <description>Date on which the exam was taken by the advisor</description>
+        </column>
+        <column name='examScope' type='text'>
+            <description>Scope of the exam taken by the advisor</description>
+        </column>
+
+    </table>
+
+    <table name='stateExamCategory'>
+        <description>contains Data on the state exam category taken by the advisor</description>
+
+        <column name='crd_number' type='bigint'>
+            <description>CRD number of the advisor</description>
+        </column>
+        <column name='examCategory' type='text'>
+            <description>Category of exam taken by the advisor</description>
+        </column>
+
+        <column name='examName' type='text'>
+            <description>name of exam written by the advisor</description>
+        </column>
+        <column name='examTakenDate' type='text'>
+            <description>Date on which the exam was taken by the advisor</description>
+        </column>
+        <column name='examScope' type='text'>
+            <description>Scope of the exam taken by the advisor</description>
+        </column>
+    </table>
+
+
+    <table name='registeredStates'>
+        <description>contains Data on the registerd states of the advisor</description>
+
+        <column name='crd_number' type='bigint'>
+            <description>CRD number of the advisor </description>
+        </column>
+        <column name='state' type='text'>
+            <description>registered state of the advisor</description>
+        </column>
+        <column name='regScope' type='text'>
+            <description>registered scope in the registered state of the advisor</description>
+        </column>
+        <column name='status' type='text'>
+            <description>status of the registered state of the advisor</description>
+        </column>
+        <column name='reqDate' type='text'>
+            <description>Date of Registration in the registered state of the advisor</description>
+        </column>
+    </table>
+
+
+</database>
