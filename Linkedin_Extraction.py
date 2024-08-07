@@ -5,14 +5,17 @@ from config import DATABASE_URI,RAPIDAPI_KEY
 import json 
 import http.client
 from urllib.parse import quote
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 def ExtractLinkedinData(crdno,linkedinurl):
     print(linkedinurl)
     lurl = quote(linkedinurl, safe='')
     conn = http.client.HTTPSConnection("linkedin-data-api.p.rapidapi.com")
     print(lurl)
     headers = {
-        'x-rapidapi-key': "1071a5eb88msh88c2441ba5a14cdp12c7aajsn5136cb6f1250",
+        'x-rapidapi-key': os.getenv('RAPIDAPI_LINKEDIN_KEY'),
         'x-rapidapi-host': "linkedin-data-api.p.rapidapi.com"
     }
 
