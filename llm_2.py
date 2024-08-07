@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from langchain.llms import OpenAI
 from langchain.sql_database import SQLDatabase
-
+import os
 # Import SQLDatabaseChain from the correct module, if available
 from langchain.chains import SQLDatabaseChain  # Assuming chains module
 
@@ -9,7 +9,7 @@ from config import DATABASE_URI
 
 load_dotenv()
 
-openai_apikey = 'vqaa1wPIUsjPTvOr1woP0zmFj_a_6838ClGY0shfJ6M'
+openai_apikey = os.getenv('OPENAI_API_KEY')
 dburl = DATABASE_URI
 
 db = SQLDatabase.from_uri(dburl)

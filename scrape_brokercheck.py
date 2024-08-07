@@ -4,6 +4,8 @@ from sqlalchemy import create_engine
 from config import DATABASE_URI
 import json 
 
+
+#destructureing the Json data and using differnt fucntion to store the data into the pgsql
 def Extract_infofrom_json(crdno,jsondata):
        # Parse the JSON data
     data = jsondata
@@ -43,7 +45,7 @@ def Extract_infofrom_json(crdno,jsondata):
             'State_Licenses': registered_states_length
     }
 
-
+#uploading the Disclosures data into Disclosures Table in pgsql
 def uploadDisclosures(crdno,data):
     if data['disclosureType']=='Customer Dispute':
         info = {
@@ -69,6 +71,10 @@ def uploadDisclosures(crdno,data):
         return
 
     print()
+
+
+#uploading the uploadStateExam data into uploadStateExam Table in pgsql
+
 def uploadStateExamInfo(crdno,data):
 
     info= {
@@ -81,6 +87,9 @@ def uploadStateExamInfo(crdno,data):
     bc_stateexaminfo = pd.DataFrame([info])
     bc_stateexaminfo.to_sql('stateExamCategory', engine, if_exists='replace', index=False)
 
+
+#uploading the principalExamCategory data into principalExamCategory Table in pgsql
+
 def principalExamCategory(crdno,data):
     info= {
         'CRD':crdno,
@@ -91,6 +100,8 @@ def principalExamCategory(crdno,data):
     }
     bc_principalExamCategory = pd.DataFrame([info])
     bc_principalExamCategory.to_sql('principalExamCategory', engine, if_exists='replace', index=False)
+
+#uploading the productExamCategory data into productExamCategory Table in pgsql
 def productExamCategory(crdno,data):
     info= {
         'CRD':crdno,
@@ -102,6 +113,9 @@ def productExamCategory(crdno,data):
     bc_productexamcategory = pd.DataFrame([info])
     bc_productexamcategory.to_sql('productExamCategory', engine, if_exists='replace', index=False)
 
+
+
+#uploading the registeredStates data into registeredStates Table in pgsql
 def registeredStates(crdno,data):
     info = {'CRD':crdno,
         "state": data['state'],
@@ -111,6 +125,8 @@ def registeredStates(crdno,data):
     
     bc_registeredStates = pd.DataFrame([info])
     bc_registeredStates.to_sql('registeredStates', engine, if_exists='replace', index=False)
+
+#uploading the scrape_brokercheck data into scrape_brokercheck Table in pgsql
 def scrape_brokercheck(crd_number):
     url = f'https://api.brokercheck.finra.org/search/individual/{crd_number}?hl=true&includePrevious=true&nrows=12&query=john&r=25&sort=bc_lastname_sort+asc,bc_firstname_sort+asc,bc_middlename_sort+asc,score+desc&wt=json'
     try:
