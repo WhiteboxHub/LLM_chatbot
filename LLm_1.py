@@ -28,6 +28,14 @@ db = SQLDatabase.from_uri(pg_uri)
 #     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
 # )
 
+# try:
+#     question = "what is phone number of the email dnunez@lsadvisors.com"
+#     result = agent_executor.invoke(question)
+#     print(result)
+
+# except Exception as e:
+#     print(e)
+
 try:
         
     gpt = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model_name='gpt-3.5-turbo')
@@ -40,7 +48,8 @@ try:
     )
 
 
-    question = "give damage amount of the disclousers information of the user with CRD=1000034"
+    # question = "are there any disclosures denied for the phone 3108936060?"
+    question = 'how many people live at this zip code 60606'
     result = agent_executor.invoke(question)
     print(result)
 

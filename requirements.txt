@@ -1,0 +1,6 @@
+langchain_community
+sqlalchemy
+langchain_openai
+langchain_community
+psycopg2
+requests
