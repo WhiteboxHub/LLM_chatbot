@@ -1,82 +1,41 @@
-import os
-
-import requests
 import streamlit as st
+from langchain_community.agent_toolkits.sql.base import create_sql_agent
+from langchain_community.utilities import SQLDatabase
+from langchain_openai import ChatOpenAI
+from langchain.agents.agent_types import AgentType
+import os
+from dotenv import load_dotenv
 
-CHATBOT_URL = os.getenv(
-    "CHATBOT_URL", "http://localhost:8000/hospital-rag-agent"
+# Load environment variables
+load_dotenv()
+
+# Initialize database and LLM
+pg_uri = "postgresql+psycopg2://postgres:password@localhost:5432/postgres"
+db = SQLDatabase.from_uri(pg_uri)
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+gpt = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model_name='gpt-3.5-turbo')
+
+# Create the SQL agent
+agent_executor = create_sql_agent(
+    llm=gpt,
+    db=db,
+    verbose=True,
+    agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
 )
 
-with st.sidebar:
-    st.header("About")
-    st.markdown(
-        """
-        This chatbot interfaces with a
-        data that has been synthetically generated.
-        """
-    )
+# Streamlit app
+st.title("LLM SQL Chatbot")
+st.write("Ask questions about financial advisors and disclosures.")
 
-    st.header("Example Questions")
-    st.markdown("- Question1")
-    st.markdown(
-        """- Question1?"""
-    )
-    st.markdown(
-        """- Question2?"""
-    )
-    st.markdown(
-        "- Question3?"
-    )
-    st.markdown(
-        """- Question4?"""
-    )
- 
+# Capture user input
+question = st.text_input("Enter your question:")
 
-
-
-st.title("System Chatbot")
-st.info(
-    """Ask me questions about CRD!"""
-)
-
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        if "output" in message.keys():
-            st.markdown(message["output"])
-
-        if "explanation" in message.keys():
-            with st.status("How was this generated", state="complete"):
-                st.info(message["explanation"])
-
-if prompt := st.chat_input("What do you want to know?"):
-    st.chat_message("user").markdown(prompt)
-
-    st.session_state.messages.append({"role": "user", "output": prompt})
-
-    data = {"text": prompt}
-
-    with st.spinner("Searching for an answer..."):
-        response = requests.post(CHATBOT_URL, json=data)
-
-        if response.status_code == 200:
-            output_text = response.json()["output"]
-            explanation = response.json()["intermediate_steps"]
-
-        else:
-            output_text = """An error occurred while processing your message.
-            Please try again or rephrase your message."""
-            explanation = output_text
-
-    st.chat_message("assistant").markdown(output_text)
-    st.status("How was this generated?", state="complete").info(explanation)
-
-    st.session_state.messages.append(
-        {
-            "role": "assistant",
-            "output": output_text,
-            "explanation": explanation,
-        }
-    )
+# When the user submits the question
+if st.button("Submit"):
+    with st.spinner("Processing..."):
+        try:
+            result = agent_executor.invoke(question)
+            st.write("**Question:**", question)
+            st.write("**Answer:**", result['output'])
+        except Exception as e:
+            st.error(f"An error occurred: {e}")

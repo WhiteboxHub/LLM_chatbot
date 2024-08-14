@@ -49,10 +49,10 @@ try:
 
 
     # question = "are there any disclosures denied for the phone 3108936060?"
-    # question = 'how many people live at this zip code 60606'
+    question = 'how many different people live at this zip code 60606'
     # question = 'Tell me more about Debora Weston'
     # question = 'Tell me more about Colleen Rielle pedey'
-    question = 'Does elisabeth hickox have any disclosure? If so what was the allegation and how recent and what was the dollar amount?'
+    # question = 'Does elisabeth hickox have any disclosure? If so what was the allegation and how recent and what was the dollar amount?'
     
     result = agent_executor.invoke(question)
     print(result)
