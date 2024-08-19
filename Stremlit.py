@@ -5,12 +5,12 @@ from langchain_openai import ChatOpenAI
 from langchain.agents.agent_types import AgentType
 import os
 from dotenv import load_dotenv
-
+from LLm_1 import LLM_model
 # Load environment variables
 load_dotenv()
 
 # Initialize database and LLM
-pg_uri = "postgresql+psycopg2://postgres:password@localhost:5432/postgres"
+pg_uri = os.getenv('DATABASE_URI')
 db = SQLDatabase.from_uri(pg_uri)
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 gpt = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model_name='gpt-3.5-turbo')
@@ -34,7 +34,7 @@ question = st.text_input("Enter your question:")
 if st.button("Submit"):
     with st.spinner("Processing..."):
         try:
-            result = agent_executor.invoke(question)
+            result = LLM_model(question)
             st.write("**Question:**", question)
             st.write("**Answer:**", result['output'])
         except Exception as e:
