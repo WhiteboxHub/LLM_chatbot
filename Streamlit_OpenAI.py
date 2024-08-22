@@ -5,7 +5,7 @@ from langchain_openai import ChatOpenAI
 from langchain.agents.agent_types import AgentType
 import os
 from dotenv import load_dotenv
-from LLm_1 import LLM_model
+from LLm_1_OpenAI import LLM_model
 # Load environment variables
 load_dotenv()
 

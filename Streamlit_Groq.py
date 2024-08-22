@@ -1,43 +1,49 @@
 import streamlit as st
-from dotenv import load_dotenv
-import os
-from llm_2_opensource import LLM_model_Groq  # Import your LLM_model function
+from llm_2_opensource import LLM_model_Groq  # Import the function from the file
 
-# Load environment variables
-load_dotenv()
+with st.sidebar:
+    st.header("About")
+    st.markdown(
+        """
+        This chatbot interfaces with data that has been synthetically generated.
+        """
+    )
 
-# Check if the API key is already set in the session state
-if 'groq_api_key' not in st.session_state:
-    st.session_state['groq_api_key'] = None
+    st.header("Example Questions")
+    st.markdown("- Tell me more about <advisor name>?")
+    st.markdown("- Do they have any disclosure? If so how recent and what was the dollar amount?")
 
-# Set up Streamlit app
-st.title("LLM SQL Chatbot")
-st.write("Ask questions about financial advisors and disclosures.")
+st.title("System Chatbot")
+st.info(
+    """Ask me questions about CRD!"""
+)
 
-# Only prompt for API key if it hasn't been set
-if st.session_state['groq_api_key'] is None:
-    groq_api_key = st.text_input("Enter your Groq API key:", type="password")
-    if groq_api_key:
-        # Store the API key in session state and set it as an environment variable
-        st.session_state['groq_api_key'] = groq_api_key
-        os.environ['GROQ_API_KEY'] = groq_api_key
-        st.success("Groq API key set successfully!")
-else:
-    st.write("Groq API key is already set.")
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
-# Capture user input for the question
-question = st.text_input("Enter your question:")
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        if "output" in message.keys():
+            st.markdown(message["output"])
 
-# When the user submits the question
-if st.button("Submit"):
-    if not question:
-        st.error("Please enter a question.")
-    else:
-        with st.spinner("Processing..."):
-            try:
-                # Call the LLM_model function with the user's question
-                response = LLM_model_Groq(question)
-                st.write("**Question:**", question)
-                st.write("**Answer:**", response['output'])
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
+        
+
+if prompt := st.chat_input("What do you want to know?"):
+    st.chat_message("user").markdown(prompt)
+
+    st.session_state.messages.append({"role": "user", "output": prompt})
+
+    data = {"text": prompt}
+
+    with st.spinner("Searching for an answer..."):
+        # Call the external function with the input prompt
+        try:
+            result = LLM_model_Groq(prompt)
+            # st.write(result['output'])
+            st.chat_message("assistant").markdown(result['output'] )
+            st.session_state.messages.append({
+                            "role": "assistant",
+                            "output": result['output'] })
+        except Exception as e:
+            print(e)
+            st.write("Error: Try a different question")
