@@ -1,6 +1,6 @@
 import streamlit as st
 from llm_2_opensource import LLM_model_Groq  # Import the function from the file
-
+from FinetuningLLm import FineTuned_LLM_model_Groq
 with st.sidebar:
     st.header("About")
     st.markdown(
@@ -39,6 +39,8 @@ if prompt := st.chat_input("What do you want to know?"):
         # Call the external function with the input prompt
         try:
             result = LLM_model_Groq(prompt)
+            # result = FineTuned_LLM_model_Groq(prompt)
+            
             # st.write(result['output'])
             st.chat_message("assistant").markdown(result['output'] )
             st.session_state.messages.append({

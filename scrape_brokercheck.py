@@ -49,7 +49,6 @@ def Extract_infofrom_json(crdno,jsondata):
 def uploadDisclosures(crdno,data):
     if data['disclosureType']=='Customer Dispute':
         info = {
-        
         'CRD':crdno,
         'eventDate':data['eventDate'],
         'disclosureType':data['disclosureType'],
