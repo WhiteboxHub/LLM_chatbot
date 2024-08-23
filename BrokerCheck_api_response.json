@@ -190,6 +190,7 @@
                         "principalExamCategory": [],
                         "productExamCategory": [
                           {
+                            "examtype":"product",
                             "examCategory": "SIE",
                             "examName": "Securities Industry Essentials Examination",
                             "examTakenDate": "10/1/2018",

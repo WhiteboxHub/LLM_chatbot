@@ -3,9 +3,9 @@ This folder contains a file called AdvizorPro_Person_04.24.2024-1.csv. Your task
 
 1.	You can use any data infrastructure you want (Postgres, BigQuery, etc) to store the data.
 2.	Using the CRD column from the CSV file, you can find and merge their data from https://brokercheck.finra.org/
-3.	Using the LinkedIn column from the CSV file, you can find and merge their data from https://rapidapi.com/rockapis-rockapis-default/api/linkedin-data-api, you also have the option to scrape it
+3.	Using the LinkedIn column from the CSV file, you can find and merge their data from https://rapidapi.com/rockapis-rockapis-default/api/linkedin-data-api you also have the option to scrape it
 4.	You will probably need SQL to join this data. You can use any ETL process you like.
-5.	Lastly leveraging some LLMs (ChatGPT, Gemini, etc), can you build a chatbot that answers questions about the data
+5.	Lastly leveraging some LLMs (ChatGPT, Gemini, etc), can you build a chatbot that answers questions about the data.
 a.	We should be able to put in a user’s name or CRD number and get back information on that person
 b.	We should be able to ask questions based on columns in the CSV and data from LinkedIn and BrokerCheck
 

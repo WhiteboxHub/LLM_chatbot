@@ -49,7 +49,6 @@ def Extract_infofrom_json(crdno,jsondata):
 def uploadDisclosures(crdno,data):
     if data['disclosureType']=='Customer Dispute':
         info = {
-        
         'CRD':crdno,
         'eventDate':data['eventDate'],
         'disclosureType':data['disclosureType'],
@@ -128,7 +127,7 @@ def registeredStates(crdno,data):
 
 #uploading the scrape_brokercheck data into scrape_brokercheck Table in pgsql
 def scrape_brokercheck(crd_number):
-    url = f'https://api.brokercheck.finra.org/search/individual/{crd_number}?hl=true&includePrevious=true&nrows=12&query=john&r=25&sort=bc_lastname_sort+asc,bc_firstname_sort+asc,bc_middlename_sort+asc,score+desc&wt=json'
+    url = f'https://api.brokercheck.finra.org/search/individual/{crd_number}'
     try:
         response = requests.get(url, timeout=10) 
         response.raise_for_status()  
