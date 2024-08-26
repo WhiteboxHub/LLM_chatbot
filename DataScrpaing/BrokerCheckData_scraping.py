@@ -34,8 +34,8 @@ def scrape_brokercheck(crd_number):
     data = response.json()
 
     if 'hits' in data and data['hits']['total'] > 0:
-
         
+
         cdata = Extract_infofrom_json(crd_number,data)
         return {
                 'CRD Number': crd_number,
@@ -78,14 +78,18 @@ def Extract_infofrom_json(crdno,jsondata):
     })
     
     uploadStateLicenses(crdno,content['registeredStates'])
-    # UploadStateExamInfo(crdno,content['stateExamCategory'])
-    # UploadPrincipalExamInfo(crdno,content['principalExamCategory'])
-    # UploadProductExamInfo(crdno,content['productExamCategory'])
-    if len(content['disclosures'])>0:
-        print(len(content['disclosures']))
-        for data in content['disclosures']:
-            uploadDisclosures(crdno,data)
-    
+    # for data in content['stateExamCategory']:
+    #     UploadStateExamInfo(crdno,data)
+    # for data in content['principalExamCategory']: 
+    #    UploadPrincipalExamInfo(crdno,data)
+    # for data in content['productExamCategory']:
+    #    UploadProductExamInfo(crdno,data)
+        
+    # if len(content['disclosures'])>0:
+    #     print(len(content['disclosures']))
+    #     for data in content['disclosures']:
+    #         uploadDisclosures(crdno,data)
+
     return {
        'Disclosures': disclosures_length,
             'Exams_Passed': total_exams_count,
@@ -117,32 +121,16 @@ def uploadDisclosures(crdno,data):
         return
 
 def UploadStateExamInfo(CRD,datajson):
-    engine = create_engine(database_url)
-
-    metadata = MetaData()
-    if len(datajson)>0:
-        json_data = json.loads(datajson)
-    else:
-        json_data = json.loads([])
-    
-    registered_states = Table(
-            'State Exams',metadata,
-            Column('CRD',BigInteger,primary_key=True),
-            Column("States_Exams_info",JSON)
-    )
-
-    metadata.create_all(engine)
-
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    
-    insert_statement = registered_states.insert().values(CRD=CRD,States_Exams_info=json_data)
-
-    session.execute(insert_statement)
-
-    session.commit()
-
-    session.close()
+    info= {
+        'CRD':CRD,
+        'examType':'State Exam',
+        'examCategory':datajson['examCategory'],
+        'examName':datajson['examName'],
+        'examTakenDate':datajson['examTakenDate'],
+        'examScope':datajson['examScope']
+    }
+    bc_principalExamCategory = pd.DataFrame([info])
+    bc_principalExamCategory.to_sql('Financial_Advisor_Exams_Info', engine, if_exists='append', index=False)
 
     print("data Inserted Successfulley for CRD: ",CRD)
 
@@ -175,57 +163,32 @@ def uploadStateLicenses(CRD,datajson):
     print("data Inserted Successfulley for CRD: ",CRD)
 
 def UploadProductExamInfo(CRD,datajson):
-    engine = create_engine(database_url)
 
-    metadata = MetaData()
-    json_data = json.loads(datajson)
-    
-    registered_states = Table(
-            'Product Exams',metadata,
-            Column('CRD',BigInteger,primary_key=True),
-            Column("Product_Exams_info",JSON)
-    )
-
-    metadata.create_all(engine)
-
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    
-    insert_statement = registered_states.insert().values(CRD=CRD,Product_Exams_info=json_data)
-
-    session.execute(insert_statement)
-
-    session.commit()
-
-    session.close()
-
+    info= {
+        'CRD':CRD,
+        'examType':'Product Exam',
+        'examCategory':datajson['examCategory'],
+        'examName':datajson['examName'],
+        'examTakenDate':datajson['examTakenDate'],
+        'examScope':datajson['examScope']
+    }
+    bc_principalExamCategory = pd.DataFrame([info])
+    bc_principalExamCategory.to_sql('Financial_Advisor_Exams_Info', engine, if_exists='append', index=False)
     print("data Inserted Successfulley for CRD: ",CRD)
 
 def UploadPrincipalExamInfo(CRD,datajson):
     engine = create_engine(database_url)
 
-    metadata = MetaData()
-    json_data = json.loads(datajson)
-    
-    registered_states = Table(
-            'principal Exams',metadata,
-            Column('CRD',BigInteger,primary_key=True),
-            Column("Principal_Exams_info",JSON)
-    )
-
-    metadata.create_all(engine)
-
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    
-    insert_statement = registered_states.insert().values(CRD=CRD,Principal_Exams_info=json_data)
-
-    session.execute(insert_statement)
-
-    session.commit()
-
-    session.close()
-
+    info= {
+        'CRD':CRD,
+        'examType':'Principal Exam',
+        'examCategory':datajson['examCategory'],
+        'examName':datajson['examName'],
+        'examTakenDate':datajson['examTakenDate'],
+        'examScope':datajson['examScope']
+    }
+    bc_principalExamCategory = pd.DataFrame([info])
+    bc_principalExamCategory.to_sql('Financial_Advisor_Exams_Info', engine, if_exists='append', index=False)
     print("data Inserted Successfulley for CRD: ",CRD)
 
 
@@ -238,10 +201,18 @@ advisors_df = pd.read_sql('SELECT * FROM financial_advisors_db', engine)
 if 'CRD' not in advisors_df.columns:
     raise ValueError("Column 'CRD' not found in DataFrame")
 
+
 # Scrape data for each CRD Number
+crdboolena = False
 for crd in advisors_df['CRD']:
-    print(crd)
-    brokercheck_data = scrape_brokercheck(crd)
-    brokercheck_df = pd.DataFrame([brokercheck_data])
-    brokercheck_df.to_sql('brokercheck_data', engine, if_exists='replace', index=False)
+    if crdboolena:
+        # print(crd)
+        brokercheck_data = scrape_brokercheck(crd)
+        brokercheck_df = pd.DataFrame([brokercheck_data])
+        brokercheck_df.to_sql('brokercheck_data', engine, if_exists='replace', index=False)
+    if crd ==1454077:
+        crdboolena=True
+    
+    
+
 
