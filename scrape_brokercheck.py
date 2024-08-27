@@ -177,3 +177,4 @@ for crd in advisors_df['CRD']:
     brokercheck_df = pd.DataFrame([brokercheck_data])
     brokercheck_df.to_sql('brokercheck_data', engine, if_exists='replace', index=False)
 
+ 

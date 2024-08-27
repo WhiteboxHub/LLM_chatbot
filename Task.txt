@@ -10,7 +10,7 @@ a.	We should be able to put in a user’s name or CRD number and get back inform
 b.	We should be able to ask questions based on columns in the CSV and data from LinkedIn and BrokerCheck
 
 Sample questions?
-1.	Tell me more about <advisor name>?
+1.	Tell me more about smith?
 2.	What schools did <he/her> go to?
 3.	Do they have any disclosure? If so how recent and what was the dollar amount?
 4.	How do they work for? 
