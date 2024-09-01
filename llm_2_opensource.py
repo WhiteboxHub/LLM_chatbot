@@ -4,14 +4,12 @@ from langchain_community.utilities import SQLDatabase
 from langchain.agents.agent_types import AgentType
 from dotenv import load_dotenv
 from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit 
-
 import os
 from groq import Groq
 import getpass
 # Load environment variables (for database URI)
 load_dotenv()
 pg_uri = os.getenv('DATABASE_URI')
-
 
 # GorqApiKey = os.getenv('GROQ_API_KEY')
 # os.environ['GROQ_API_KEY'] = getpass.getpass('Enter your Groq API key:')
@@ -49,7 +47,7 @@ def LLM_model_Groq(question):
         print("Agent executer llm done")
 
 
-        result = agent_executor.invoke(question)
+        result = agent_executor.invoke(f"based on DB connection provided give a precise answer with query Limit = 1 for the following question: {question}")
         print(result)
         return result
     except Exception as e:
