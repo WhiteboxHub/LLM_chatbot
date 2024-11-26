@@ -1,6 +1,5 @@
 import streamlit as st
-from llm_2_opensource import LLM_model_Groq  # Import the function from the file
-
+from Groq_llm import Groq_LLM
 with st.sidebar:
     st.header("About")
     st.markdown(
@@ -11,6 +10,7 @@ with st.sidebar:
 
     st.header("Example Questions")
     st.markdown("- Tell me more about <advisor name>?")
+    st.markdown("- Do they have any disclosure? If so how recent and what was the dollar amount?")
     st.markdown("- Do they have any disclosure? If so how recent and what was the dollar amount?")
 
 st.title("System Chatbot")
@@ -38,12 +38,18 @@ if prompt := st.chat_input("What do you want to know?"):
     with st.spinner("Searching for an answer..."):
         # Call the external function with the input prompt
         try:
-            result = LLM_model_Groq(prompt)
+            result = Groq_LLM(prompt)
             # st.write(result['output'])
-            st.chat_message("assistant").markdown(result['output'] )
-            st.session_state.messages.append({
-                            "role": "assistant",
-                            "output": result['output'] })
+            if result.content:
+                st.chat_message("assistant").markdown(result.content )
+                st.session_state.messages.append({
+                                "role": "assistant",
+                                "output": result.content })
+            else:
+                st.chat_message("assistant").markdown(result.error.message )
+                st.session_state.messages.append({
+                                "role": "assistant",
+                                "output": result.error.message })
         except Exception as e:
             print(e)
             st.write("Error: Try a different question")
