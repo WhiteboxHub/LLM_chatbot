@@ -1,9 +1,9 @@
-import pandas as pd
-from sqlalchemy import create_engine
 import sys
 import os
 # Add the parent directory (project folder) to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import pandas as pd
+from sqlalchemy import create_engine
 from Scrape_brockercheck import main
 
 from config import DATABASE_URI

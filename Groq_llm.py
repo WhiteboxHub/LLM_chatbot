@@ -14,7 +14,8 @@ def Groq_LLM(question):
     
     try:
         prompt = f"""
-            You are an assistant that take out the information form the context and create a well structrued paragraph answers along with the given question
+            You are an assistant that take out the information form the context and create a well structrued paragraph 
+            answers along with the given question
 
             <Question>: {question}  </Question>
             <Query>: {query} </Query>

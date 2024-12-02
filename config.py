@@ -1,13 +1,13 @@
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 #the data in env file should be as follows
-OPENAI_API_KEY='YourOpenaikey'
+OPENAI_API_KEY= os.getenv('OPENAI_API_KEY')
 
-RAPIDAPI_LINKEDIN_KEY = 'your Rapid api lindedin key '
+RAPIDAPI_LINKEDIN_KEY = os.getenv('RAPIDAPI_LINKEDIN_KEY')
 
-DATABASE_URI = "postgresql+psycopg2://postgres:password@localhost:5432/LLM_assistant"
+DATABASE_URI = os.getenv('DATABASE_URI')
 
 # Define your RapidAPI key
-
-GROQ_key = "GROQ key here"
-
-# DATABASE_URI = 'postgresql+psycopg2://postgres:7868@localhost:5432/financial_advisors_db'
+GROQ_key = os.getenv('GROQ_key')

@@ -17,5 +17,5 @@ def upload_states_data(CRD_NUMBER,JSONDATA,engine):
         registeredStates = pd.DataFrame([info])
         registeredStates.to_sql('registeredstates', engine, if_exists='append', index=False)
     
-    print(f"states data uplodeed for {CRD_NUMBER}")
+    print(f"states data uplodeed for {CRD_NUMBER} sucessfully")
     return True

@@ -25,7 +25,7 @@ def exams_data(CRD_NUMBER,JSONDATA,engine):
             'examcategory':data['examCategory'],
             'examname':data['examName'],
             'examtakendate':data['examTakenDate'],
-            'examscope':data['examScope'],
+            'examdcope':data['examScope'],
             'exam_type':'principalExamCategory',
         }
         status, response = Upload_exam_data(info,engine)
